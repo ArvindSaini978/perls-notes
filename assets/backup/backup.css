@@ -1,0 +1,184 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.top{
+    background-color: white;
+    position: sticky;
+    top: 0px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+.header{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #efef01;
+    padding: 0px 20px;
+}
+#logo{
+    font-size: 1.8rem;
+    margin-right: 16px;
+}
+.logo-text{
+    font-family: cursive;
+    font-size: 27px;
+    user-select: none;
+}
+
+.add-container{
+    height: 64px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0px 40px;
+}
+
+.add{
+    background-color: #bfffbe;
+    color: #605252;
+    font-size: 18px;
+    font-family: cursive;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    padding: 10px 36px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0px 6px 10px -2px #5b725f;
+    transition: all 10ms ease-in;
+    user-select: none;
+}
+.add:focus{
+    outline: none;
+}
+.add:hover{
+    color: black;
+    background: #ffc782;
+    transition: all 0.2s ease-in;
+    box-shadow: 1px 2px 8px -1px #5b725f;
+}
+.add:active{
+    transition: all 10ms ease-in;
+    box-shadow: 1px 2px 8px -5px #5b725f;
+}
+
+.notes-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 1pc;
+    
+}
+
+.note{
+    background-color: #efefdf;
+    margin-right: 26px;
+    width: 300px;
+    height: 200px;
+    margin-bottom: 2pc;
+    position: relative;
+    border-radius: 21px;
+    overflow: hidden;
+    box-shadow: 0px 5px 9px -2px green;
+}
+.btns{
+    padding: 5px 10px;
+    display: flex;
+    width: fit-content;
+    justify-content: end;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-top: -56px;
+    transition: all 0.2s ease;
+}
+.edit{
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    border-radius: 55px;
+    cursor: pointer;
+    color: #af0404;
+    border: none;
+    box-shadow: 0px 3px 6px -1px #201e1e;
+    transition: all 0.05s ease-in;
+}
+.delete{
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    border-radius: 55px;
+    cursor: pointer;
+    color: #af0404;
+    border: none;
+    box-shadow: 0px 3px 6px -1px #201e1e;
+    transition: all 0.05s ease-in;
+}
+.edit:active, .delete:active{
+    font-size: 20px;
+    box-shadow: 0px 3px 7px -3px #201e1e;
+}
+.main{
+    background-color: #efefdf;
+    width: 100%;
+    height: 100%;
+    padding: 10px 16px;
+    overflow: auto;
+    font-size: 16px;
+    font-family: cursive;
+    font-weight: 100;
+    word-wrap: break-word;
+}
+.main::selection{
+    background-color: rgb(21, 255, 0);
+}
+.main::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+.main::-webkit-scrollbar-thumb{
+    background-color: rgba(72, 106, 72, 0.593);
+    border-radius: 23px;
+    margin: 20px 0px;
+}
+.hidden{
+    display: none;
+}
+.writeNote{
+    background-color: #efefdf;
+    resize: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 10px 20px;
+    outline: none;
+    font-size: 16px;
+    font-family: cursive;
+}
+.writeNote::selection{
+    background-color: rgb(21, 255, 0);
+}
+.writeNote::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+.writeNote::-webkit-scrollbar-thumb{
+    background-color: rgba(72, 106, 72, 0.593);
+    border-radius: 23px;
+    margin: 20px 0px;
+}
+
+
+
+.note:hover .btns{
+    margin-top: 0px;
+    transition: all 0.2s ease;
+}
